@@ -41,6 +41,10 @@ public class ListNotesActivity extends ActionBarActivity {
                 String noteTitle = notesTitlesList.get(position);
                 String noteText = notesTextList.get(position);
                 //Toast.makeText(ListNotesActivity.this, "Title: " + noteTitle + "\nText: " + noteText, Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(ListNotesActivity.this, ShowNoteActivity.class);
+                intent.putExtra("NOTE_TITLE", noteTitle);
+                intent.putExtra("NOTE_TEXT", noteText);
+                startActivity(intent);
             }
         });
     }
@@ -70,7 +74,6 @@ public class ListNotesActivity extends ActionBarActivity {
 
 
     public void newNote(View view) {
-
         Intent intent = new Intent(this, CreateNoteActivity.class);
         startActivityForResult(intent, NEW_NOTE_REQUEST);
     }
