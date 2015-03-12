@@ -15,7 +15,7 @@ public class ShowNoteActivity extends ActionBarActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_show_note);
+        setContentView(R.layout.activity_display_note);
         Intent intent = getIntent();
         String noteTitle = intent.getExtras().getString("NOTE_TITLE");
         String noteText = intent.getExtras().getString("NOTE_TEXT");
