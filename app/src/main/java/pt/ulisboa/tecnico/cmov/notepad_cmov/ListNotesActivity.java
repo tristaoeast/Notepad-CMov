@@ -34,6 +34,11 @@ public class ListNotesActivity extends ActionBarActivity {
         // Get ListView object from xml
         listView = (ListView) findViewById(R.id.lv_listItems);
         listView.setAdapter(noteTitlesAdapter);
+        notesTextList.add(0,"First text...");
+        notesTitlesList.add(0,"First title...");
+        notesTextList.add(0,"Second text...");
+        notesTitlesList.add(0,"Second title...");
+        noteTitlesAdapter.notifyDataSetChanged();
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
