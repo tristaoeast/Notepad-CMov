@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Notepad-CMov</string>
+    <string name="new_note_button">New Note</string>
+    <string name="note_title_hint">Note title...</string>
+    <string name="note_text_hint">Note text...</string>
+    <string name="title_activity_create_note">New Note</string>
+    <string name="action_settings">Settings</string>
+
+</resources>
