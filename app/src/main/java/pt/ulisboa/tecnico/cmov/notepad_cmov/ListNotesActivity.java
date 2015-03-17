@@ -28,17 +28,19 @@ public class ListNotesActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_notes);
 
+
         notesTitlesList = new ArrayList<String>();
         notesTextList = new ArrayList<String>();
         noteTitlesAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, android.R.id.text1, notesTitlesList);
         // Get ListView object from xml
         listView = (ListView) findViewById(R.id.lv_listItems);
         listView.setAdapter(noteTitlesAdapter);
-        notesTextList.add(0,"First text...");
-        notesTitlesList.add(0,"First title...");
-        notesTextList.add(0,"Second text...");
-        notesTitlesList.add(0,"Second title...");
+//        notesTextList.add(0, "First text...");
+//        notesTitlesList.add(0, "First title...");
+//        notesTextList.add(0, "Second text...");
+//        notesTitlesList.add(0, "Second title...");
         noteTitlesAdapter.notifyDataSetChanged();
+
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -73,7 +75,6 @@ public class ListNotesActivity extends ActionBarActivity {
         if (id == R.id.action_settings) {
             return true;
         }
-
         return super.onOptionsItemSelected(item);
     }
 
